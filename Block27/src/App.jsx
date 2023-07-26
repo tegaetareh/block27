@@ -1,17 +1,17 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import SignUpForm from './components/SignUpForm'
 import Authenticate from './components/Authenticate'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [token, setToken] = useState(null)
 
   return (
     <div>
-        <h2>Block 27 - Authentication</h2>
-        {/* <Authenticate /> */}
-        <SignUpForm />
-
+        <h2><u>Block 27 - Authentication</u></h2>
+        
+        <SignUpForm  setToken={setToken} />
+        <Authenticate token={token} setToken={setToken} />
     </div>
  
   )
