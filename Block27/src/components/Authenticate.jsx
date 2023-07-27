@@ -2,6 +2,7 @@ import { useState } from "react";
 export default function Authenticate({ token }) {
     const [successMessage, setSuccessMessage] = useState(null);
     const [error, setError] = useState(null);
+    const [username, setUsername] = useState(null);
 
     async function handleClick() {
         console.log("handleClick fired!!!")
@@ -18,7 +19,9 @@ export default function Authenticate({ token }) {
             );
             const result = await response.json();
             console.log(result)
-            setSuccessMessage(result.message);
+            console.log(result.data.username)
+            setSuccessMessage(result.message)
+            setUsername(result.data.username)
         } catch (error) {
             setError(error.message);
         }
@@ -32,6 +35,7 @@ export default function Authenticate({ token }) {
             <h2><u>Authenticate</u></h2>
             {successMessage && <p>{successMessage}</p>}
             {error && <p>{error}</p>}
+            {username && <p>Welcome {username}</p>}
             <button onClick={handleClick}>Authenticate Token!</button>
         </div>
     );
@@ -39,3 +43,4 @@ export default function Authenticate({ token }) {
 
 //if username is less than 4 characters error message will render to error paragraph saying
 //user name is less than 4 characters
+//use styling to make correctly authenticated dissappear
