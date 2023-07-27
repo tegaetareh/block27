@@ -40,3 +40,39 @@
 .read-the-docs {
   color: #888;
 }
+
+form, label, input {
+  display: flex;
+  flex-direction: column;
+  
+}
+label {
+  padding: 10px;
+}
+input, button {
+  height: 30px;
+  width: 300px;
+  align-self: center;
+}
+button {
+  height: 50px;
+  width: 300px;
+  align-self: center;
+}
+
+/* .success, .error {
+  border: 1px solid limegreen;
+  border-radius: 5px;
+  animation: hideAnimation 0s ease-in-out 5s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes hideAnimation {
+  to {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display:none;
+  }
+} */

@@ -34,13 +34,12 @@ export default function Authenticate({ token }) {
         <div>
             <h2><u>Authenticate</u></h2>
             {successMessage && <p className="success"> {successMessage}</p>}
-            {error && <p>{error}</p>}
+            {error && <p className="error">{error}</p>}
             {username && <p>Welcome {username}</p>}
             <button onClick={handleClick}>Authenticate Token!</button>
         </div>
     );
 }
 
-//if username is less than 4 characters error message will render to error paragraph saying
-//user name is less than 4 characters
+
 //use styling to make correctly authenticated dissappear

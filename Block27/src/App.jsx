@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-        <h2><u>Block 27 - Authentication</u></h2>
+        <h1><u>Block 27 - Workshop</u></h1>
         
         <SignUpForm  setToken={setToken} />
         <Authenticate token={token} setToken={setToken} />
